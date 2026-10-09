@@ -1,5 +1,7 @@
 package com.example.myapplication
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -9,10 +11,13 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Card
 import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -21,13 +26,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-@composable
-fun ActivitasPertama(
-    modifier: Modifier,
-    cardColors: Nothing?.(Long, Any?) -> Unit,
-    align: Modifier.Companion.(Alignment) -> Unit
-){
-    column(
+@Composable
+fun ActivitasPertama(modifier: Modifier){
+    Box(
+        modifier = modifier.fillMaxSize()
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.img),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
+    Column(
         modifier = Modifier.padding(top = 100.dp)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -44,14 +54,11 @@ fun ActivitasPertama(
         Spacer(modifier = Modifier.height(25.dp))
 
         val cardDefaults = null
-        card(
-            modifier = Modifier
-                .fillMaxWidth(fraction = 1f)
-                .padding(all = 12.dp),
+        Card(modifier = Modifier.fillMaxWidth(fraction = 1f).padding(all = 12.dp),
             colors = cardDefaults.cardColors(
-                ContainerColor = colorResource(id = R.color.card_0_bg)
+                containerColor = colorResource(id = R.color.card_0_bg)
             )
-
+        )
             {
                 Row(){
                     val gambar = painterResource(id = R.drawable.img)
@@ -61,7 +68,7 @@ fun ActivitasPertama(
                         modifier = Modifier.size(100.dp).padding(all = 5.dp)
                     )
 
-                    spacer(modifier = Modifier.width(30.dp))
+                    Spacer(modifier = Modifier.width(30.dp))
                     Column(){
                         Text(
                             stringResource("Derek Dzakir Cadudasa"),
