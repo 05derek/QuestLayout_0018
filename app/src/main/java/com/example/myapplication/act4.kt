@@ -47,6 +47,7 @@ fun ActivitasPertama(modifier: Modifier, cardColors: Nothing?.(Long, Any?) -> Un
             colors = cardDefaults.cardColors(
                 ContainerColor = colorResource(id = R.color.card_0_bg)
             )
+
             {
                 Row(){
                     val gambar = painterResource(id = R.drawable.img)
@@ -64,6 +65,13 @@ fun ActivitasPertama(modifier: Modifier, cardColors: Nothing?.(Long, Any?) -> Un
                             fontFamily = FontFamily.Cursive,
                             color = Color.White,
                             modifier = Modifier.padding(top = 15.dp)
+                        )
+
+                        Text(
+                            stringResource("Malang, Amsterdam"),
+                            fontSize = 20.sp,
+                            color = Color.Yellow,
+                            modifier = Modifier.padding(top = 10.dp)
                         )
                     }
 
