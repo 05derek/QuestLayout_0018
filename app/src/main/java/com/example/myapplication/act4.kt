@@ -76,7 +76,12 @@ fun ActivitasPertama(modifier: Modifier, cardColors: Nothing?.(Long, Any?) -> Un
                     }
 
                 }
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                )
             }
+
         )
     }
 }
