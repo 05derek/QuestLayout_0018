@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">pertemuan 4</string>
+    <string name="prodi">Teknologi Informasi</string>
+    <string name="univ">Universitas Muhammadiyah Yogyakarta</string>\
+    <string name="nama">Derek Dzakir Cadudasa</string>
+    <string name="alamat">Malang, Amsterdam</string>
+    <string name="copy">Copyright, 2026</string>
 </resources>
