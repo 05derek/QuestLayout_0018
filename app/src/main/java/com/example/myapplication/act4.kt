@@ -22,7 +22,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @composable
-fun ActivitasPertama(modifier: Modifier, cardColors: Nothing?.(Long, Any?) -> Unit){
+fun ActivitasPertama(
+    modifier: Modifier,
+    cardColors: Nothing?.(Long, Any?) -> Unit,
+    align: Modifier.Companion.(Alignment) -> Unit
+){
     column(
         modifier = Modifier.padding(top = 100.dp)
             .fillMaxSize(),
@@ -79,7 +83,14 @@ fun ActivitasPertama(modifier: Modifier, cardColors: Nothing?.(Long, Any?) -> Un
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                )
+                ){
+                    Text(
+                        stringResource(R.string.copy),
+                        modifier = Modifier
+                            .align(Alignment.BottomCenter)
+                            .padding(bottom = 50.dp)
+                    )
+                }
             }
 
         )
